@@ -1,0 +1,18 @@
+.forecast-day-card {
+    background: #35373d;
+    border: 1px solid #35373d;
+    display: grid;
+    /* flex-direction: row;
+    justify-content: space-between;
+    align-items: start; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card-time {
+    font-size: 18px;
+}
+
+.card-temp {
+    color: aliceblue;
+    font-weight: 600;
+}
