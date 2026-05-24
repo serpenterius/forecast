@@ -1,4 +1,7 @@
-export async function getData(query) {
+import type { WeatherData } from "../types/WeatherData";
+import type { HourForecast } from "../types/HourForecast";
+
+export async function getData(query : string): Promise<WeatherData> {
     try {
         const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=dec7248bfcca47f69c3174538262104&q=${query}&days=1&aqi=no&alerts=no`)
         if(!response.ok) {
@@ -6,7 +9,7 @@ export async function getData(query) {
         }
         const data = await response.json();
         const forecast = data.forecast.forecastday[0];
-        const weatherData = {
+        const weatherData: WeatherData = {
             time_stamp: {
                 hours: new Date(data.current.last_updated_epoch * 1000).getHours(),
                 minutes: new Date(data.current.last_updated_epoch * 1000).getMinutes()
@@ -32,7 +35,6 @@ export async function getData(query) {
                 })
             }
         }
-        console.log(weatherData);
         return weatherData
     } catch (err) {
         console.error('Ошибка:' + err.message);

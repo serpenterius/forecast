@@ -1,20 +1,24 @@
 .inputs {
     display: flex;
     gap: 15px;
-    padding: 50px 10px;
 }
 
 .inputs input {
-    width: 400px;
+    background: #D9D9D9;
+    color: black;
+    width: 80%;
     height: 30px;
     font-size: 18px;
     padding-left: 7px;
+    outline: none;
+    font-family: 'DOS';
 }
 
 .inputs button {
     width: 100px;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'DOS';
+    font-size: 13px;
 }
 
 @media(max-width: 500px) {

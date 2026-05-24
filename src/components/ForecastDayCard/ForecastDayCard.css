@@ -1,11 +1,13 @@
 .forecast-day-card {
-    background: #35373d;
-    border: 1px solid #35373d;
+    background: #888888;
     display: grid;
-    /* flex-direction: row;
-    justify-content: space-between;
-    align-items: start; */
+    padding: 20px 0px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.forecast-day-card p {
+    color: #000000;
 }
 
 .card-time {

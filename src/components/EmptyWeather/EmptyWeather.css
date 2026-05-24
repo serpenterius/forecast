@@ -1,0 +1,12 @@
+.weather_container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+.weather_warning {
+    font-size: 42px;
+    line-height: 40px;
+}

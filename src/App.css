@@ -1,6 +1,28 @@
+@font-face {
+    font-family: 'DOS';
+    src: url(assets/dos2000-ru-en.otf) format('opentype');
+}
+
+body {
+    font-family: 'DOS';
+    background: #008481;
+}
+
+
 .App {
-    border: 1px solid #000;
-    background: #1f1f24;
+    background: #A9A9A9;
     flex: 1;
     margin: 50px 0px;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    padding: 2px 8px;
+    background: #2C00CA;
+    margin-bottom: 20px;
+}
+
+.logo p {
+    color: #fff;
 }

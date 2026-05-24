@@ -4,12 +4,15 @@ import { getData } from './features/getData';
 
 import { Inputs } from './components/Inputs/Inputs';
 import { WeatherForecast } from './components/WeatherForecast/WeatherForecast';
+import { EmptyWeather } from './components/EmptyWeather/EmptyWeather';
+
+import type { WeatherData } from './types/WeatherData';
 
 import './App.css'
 
 function App() {
-  const [query, setQuery] = useState(null);
-  const [forecast, setForecast] = useState(null);
+  const [query, setQuery] = useState<null | string>(null);
+  const [forecast, setForecast] = useState<null | WeatherData>(null);
 
 
   useEffect(() => {
@@ -30,8 +33,12 @@ function App() {
 
   return (
     <div className='App'>
+      <div className='logo'>
+        <p>Weather App</p>
+      </div>
+
       <Inputs setQuery={setQuery} />
-      {forecast === null ? null : <WeatherForecast forecast={forecast} />}
+      {forecast === null ? <EmptyWeather/> : <WeatherForecast forecast={forecast} />}
     </div>
   )
 }
